@@ -32,7 +32,11 @@
     </p>
     <h3>This connector</h3>
     <p>Originally MalaRIA demonstrated that permissive <code>crossdomain.xml</code> files are bad (because attacker can read it e.g. via the MalaRIA proxy).
+<<<<<<< HEAD
     But as I'm a HTML5 guy, I decided to create a connector compatible with my <a href="index.html">cors-proxy-browser</a>, which can use <a href="http://www.w3.org/TR/cors/">CORS</a> instead of flash.
+=======
+    But as I'm a HTML5 guy, I decided to create a connector compatible with my <a href="browser.html">cors-proxy-browser</a>, which can use <a href="http://www.w3.org/TR/cors/">CORS</a> instead of flash.
+>>>>>>> gh-pages
     To communicate with MalaRIA I use <a href="http://dev.w3.org/html5/websockets/">WebSocket</a> (because I don't have raw flash/silverlight sockets available). And that's it. Now you can use MalaRIA with only HTML5 power. 
     </p>
     <h2>Requirements</h2>
@@ -65,7 +69,11 @@ var p;
 function requestUrl(url, method) {
     log("Requesting " + url);
     var use_methods = ['cors-withcredentials','flash']; 
+<<<<<<< HEAD
     // USE ['flash'] instead to use flash only, see index.html
+=======
+    // USE ['flash'] instead to use flash only, see browser.html
+>>>>>>> gh-pages
     f.postMessage(JSON.stringify([ use_methods, url, method, null ]), '*');
 }
 
@@ -179,7 +187,11 @@ function start() {
 
 document.getElementById('fetcher').onload = start;
 
+<<<<<<< HEAD
 document.getElementById('fetcher').src = "index.html?silent&_=" + Math.random();
+=======
+document.getElementById('fetcher').src = "browser.html?silent&_=" + Math.random();
+>>>>>>> gh-pages
 
 if (!navigator.userAgent.match(/hrome/)) {
     log('Sorry, this page works in Chrome only for now.');
