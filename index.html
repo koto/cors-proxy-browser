@@ -46,7 +46,18 @@
       <span class="small">by <a href="https://github.com/koto">koto</a></span></h1>
 
     <div class="description">
-      CORS based proxy (with Flash backend, remote control, MalaRIA integration and more goodies)
+      Various security oriented Cross Origin Remote Sharing utilites.
+      <dl>
+        <dt><a href="browser.html">CORS proxy browser</a></dt>
+        <dd>Uses embedded CORS & Flash backends to demonstrate how it's possible to read cross-origin
+            pages on permissive domains. Nice UI, storing history, preferences, cookie support. Can also be used without UI as a iframed component (other tools use this). 
+        </dd>
+        <dt><a href="remote.html">Remote controller</a></dt>
+        <dd>Embeds the proxy browser and communicates with it (HTML5 postMessage) to fetch URLs and process HTTP responses. 
+        When modified, could be used in a XSS attack to make CSRF with victim credentials or internal network discovery.</dd>
+        <dt><a href="malaria.html">MalaRIA connector</a></dt>
+        <dd>Uses the browser component and connects to MalaRIA server so that attacker can browse with victim's browser just by using MalaRIA HTTP proxy</dd>
+      </ul>
     </div>
 
     
